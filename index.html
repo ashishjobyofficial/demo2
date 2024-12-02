@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Joby - Web Designer & Programmer</title>
+    <title>Ashish Joby-Website</title>
     <link rel="stylesheet" href="style2.css">
     <script src="https://kit.fontawesome.com/3bc953ef2d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header id="header">
+    <div id="header">
         <div class="container">
             <nav>
                 <img src="" alt="Logo" class="logo">
@@ -24,21 +24,22 @@
             </nav>
             <div class="header-text">
                 <p>Web Designer, Programmer</p>
-                <h1>Hey, I'm <span>Ashish Joby</span> <br> from India</h1>
+                <h1>Hey, I'm <span>Ashish Joby</span><br>from India</h1>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- About Section -->
-    <section id="about">
+    <!------- About Section ------->
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./about.jpg" alt="About Me">
+                    <img src="./about.jpg" alt="About Me Image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Passionate Web Designer and Programmer with skills in various technologies. Dedicated to creating user-friendly and visually stunning websites.</p>
+                    <p>Short biography and introduction text goes here. You can add information about yourself, your journey, etc.</p>
+
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -48,71 +49,76 @@
                         <ul>
                             <li><span>Web Dev</span><br>Website Development</li>
                             <li><span>Programming</span><br>C, Java</li>
-                            <li><span>Algorithms</span><br>Data Structures & Algorithms</li>
+                            <li><span>Algorithms</span><br>Algorithms</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2023-2024</span><br>Website Development</li>
-                            <li><span>2024-2025</span><br>Software Development</li>
-                            <li><span>2025-2026</span><br>Full Stack Development</li>
+                            <li><span>2024-2025</span><br>C, Java</li>
+                            <li><span>2025-2026</span><br>Algorithms</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>B.Tech CSE</span><br>Computer Science & Engineering</li>
-                            <li><span>HSE</span><br>Higher Secondary Education</li>
-                            <li><span>HS</span><br>Higher Secondary</li>
+                            <li><span>B.Tech CSE</span><br>Website Development</li>
+                            <li><span>HSE</span><br>C, Java</li>
+                            <li><span>HS</span><br>Algorithms</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services">
+    <!------------- Services Section ----------->
+    <div id="services">
         <div class="container">
             <h1 class="sub-title">Services</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-brands fa-web-awesome"></i>
                     <h2>Web Development</h2>
-                    <p>Building responsive and high-performance websites tailored to your business needs.</p>
+                    <p>Description of web development services you offer.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Software Development</h2>
-                    <p>Custom software solutions to streamline business operations and enhance productivity.</p>
+                    <h2>Programming</h2>
+                    <p>Description of programming services you offer.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-cogs"></i>
-                    <h2>Consulting</h2>
-                    <p>Consulting for optimizing workflows and adopting the latest tech for your projects.</p>
+                    <h2>Algorithms</h2>
+                    <p>Description of algorithm-related services you offer.</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- Portfolio Section (Add as required) -->
 
-        function opentab(tabname) {
-            for (var tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-
-            for (var tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
 </body>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </html>
+
